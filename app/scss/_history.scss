@@ -1,0 +1,23 @@
+.history {
+
+    &__transaction {
+        padding-top: 0;
+    }
+
+    &__show {
+        display: flex;
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+    }
+
+    &__quantity {
+        margin-left: auto;
+    }
+
+    &__hide {
+        margin-left: auto;
+    }
+}

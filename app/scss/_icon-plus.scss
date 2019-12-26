@@ -1,0 +1,26 @@
+.icon-plus {
+    display: flex;
+
+    &_vertical-align_center {
+        align-items: center;
+    }
+}
+
+.icon-plus__icon {
+
+    &_indent-r_s {
+        margin-right: $space-s;
+    }
+
+    &_indent-r_m {
+        margin-right: $space-m;
+    }
+
+    &_indent-l_l {
+        margin-left: $space-l;
+    }
+}
+
+.icon-plus__block {
+    display: flex;
+}

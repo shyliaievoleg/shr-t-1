@@ -1,0 +1,12 @@
+.section {
+    display: flex;
+
+    &_indent-b_xxxxl {
+        margin-bottom: $space-xxxxl;
+    }
+
+    &_space-v_xxxxl {
+        padding-top: $space-xxxxl;
+        padding-bottom: $space-xxxxl;
+    }
+}

@@ -1,0 +1,117 @@
+// Colors
+$white: #fff;
+$black: #000;
+$tangerine-yellow: #fc0;
+$dodger-blue: #07f;
+$red-orange: #f33;
+
+// Opacity Colors
+$white-30: rgba(255, 255, 255, 0.3);
+$white-60: rgba(255, 255, 255, 0.6);
+$black-30: rgba(0, 0, 0, 0.3);
+$black-60: rgba(0, 0, 0, 0.6);
+
+// Content Colors
+$blue: #5dcdf9;
+$green: #23b324;
+$red: $red-orange;
+$purple: #c62cff;
+
+// Spaces
+$space-xxxs: 3px;
+$space-xxs: 6px;
+$space-xs: 9px;
+$space-s: 15px;
+$space-m: 18px;
+$space-l: 24px;
+$space-xl: 27px;
+$space-xxl: 36px;
+$space-xxxl: 45px;
+$space-xxxxl: 51px;
+$space-xxxxxl: 72px;
+
+// Fonts Heights
+$font-height-s: 8px;
+$font-height-m: 10px;
+$font-height-l: 11px;
+$font-height-xl: 13px;
+$font-height-xxl: 16px;
+
+// Fonts Line Heights
+$line-height-s: 21px;
+$line-height-l: 28px;
+$line-height-m: 25px;
+$line-height-xl: 34px;
+$line-height-xxl: 38px;
+
+// Theme colors
+$bg-default-color: $white;
+$bg-accent-color: $tangerine-yellow;
+$border-color: $black;
+$text-primary-color: $black;
+$text-secondary-color: $black-60;
+$text-ghost-color: $black-30;
+$text-link-color: $dodger-blue;
+
+.theme {
+    font-size: $font-height-l;
+    line-height: $line-height-l;
+    margin: 0;
+    padding: 0;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    &_size_default {
+
+    }
+
+    &_space_default {
+
+    }
+
+    &_gap_small {
+
+    }
+
+    &_color_project-default {
+        $bg-default-color: $white;
+        $bg-accent-color: $tangerine-yellow;
+        $border-color: $black;
+        $text-primary-color: $black;
+        $text-secondary-color: $black-60;
+        $text-ghost-color: $black-30;
+        $text-link-color: $dodger-blue;
+    }
+
+    &_color_project-brand {
+        $bg-default-color: $dodger-blue;
+        $bg-accent-color: $white;
+        $border-color: $white;
+        $text-primary-color: $white;
+        $text-secondary-color: $white-60;
+        $text-ghost-color: $white-30;
+        $text-link-color: $white;
+    }
+
+    &_color_project-inverse {
+        $bg-default-color: $black;
+        $bg-accent-color: $white;
+        $border-color: $white;
+        $text-primary-color: $white;
+        $text-secondary-color: $white-60;
+        $text-ghost-color: $white-30;
+        $text-link-color: $dodger-blue;
+    }
+
+    &_color_project-warning {
+        $bg-default-color: $red-orange;
+        $bg-accent-color: $white;
+        $border-color: $red-orange;
+        $text-primary-color: $white;
+        $text-secondary-color: $white-60;
+        $text-ghost-color: $white-30;
+        $text-link-color: $dodger-blue;
+    }
+}
