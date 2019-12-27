@@ -20,7 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
         if (onoffswitch) {
             onoffswitch.classList.toggle('onoffswitch_checked');
 
-            // TODO: Switch theme
+            let defaultTheme = document.querySelectorAll('.theme_color_project-default');
+            let inverseTheme = document.querySelectorAll('.theme_color_project-inverse');
+
+            for (let node of defaultTheme) {
+                node.classList.add('theme_color_project-inverse');
+                node.classList.remove('theme_color_project-default');
+            }
+
+            for (let node of inverseTheme) {
+                node.classList.add('theme_color_project-default');
+                node.classList.remove('theme_color_project-inverse');
+            }
         }
 
     });

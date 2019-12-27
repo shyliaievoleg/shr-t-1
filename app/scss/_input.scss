@@ -1,6 +1,9 @@
 .input {
     width: 100%;
-    border: 3px solid $border-color;
+
+    @include themify {
+        border: 3px solid $border-color;
+    }
 
     &_size_s {
         height: 24px;

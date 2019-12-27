@@ -2,6 +2,10 @@
     width: 100%;
     display: flex;
 
+    @include screen-m {
+        flex-flow: row wrap;
+    }
+
     &_m-columns_10 {
 
     }
@@ -40,6 +44,11 @@
 .grid__fraction {
     display: flex;
     flex-flow: row wrap;
+
+    @include screen-m {
+        width: 100% !important;
+        margin: 0 0 $space-s !important;
+    }
 
     .grid_col-gap_two-thirds &:not(:last-child) {
         margin-right: ($space-xl * 2) / 3;

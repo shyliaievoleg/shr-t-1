@@ -1,6 +1,9 @@
 .button {
     width: 200px;
-    background: $bg-accent-color;
+
+    @include themify {
+        background: $bg-accent-color;
+    }
 
     &_size_s {
         height: 24px;

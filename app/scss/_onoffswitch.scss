@@ -1,10 +1,13 @@
 .onoffswitch {
     width: 97px;
     height: 32px;
-    border: 2px solid $border-color;
     padding: 2px;
     display: flex;
     cursor: pointer;
+
+    @include themify {
+        border: 2px solid $border-color;
+    }
 
     &_checked {
         justify-content: flex-end;
@@ -13,6 +16,9 @@
     &__button {
         width: 24px;
         height: 24px;
-        background: $border-color;
+
+        @include themify {
+            background: $border-color;
+        }
     }
 }

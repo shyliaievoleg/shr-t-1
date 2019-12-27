@@ -13,6 +13,9 @@
     &__logo {
         width: 179px;
         height: 34px;
-        background: $text-primary-color;
+
+        @include themify {
+            background: $text-primary-color;
+        }
     }
 }

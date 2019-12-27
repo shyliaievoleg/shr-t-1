@@ -4,6 +4,10 @@
 
     &__image {
 
+        @include themify {
+            background: $bg-default-color;
+        }
+
         .image {
             height: 160px;
         }

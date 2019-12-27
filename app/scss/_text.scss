@@ -52,19 +52,31 @@
     display: inline-block;
 
     .text_view_primary & {
-        background: $text-primary-color;
+
+        @include themify {
+            background: $text-primary-color;
+        }
     }
 
     .text_view_secondary & {
-        background: $text-secondary-color;
+
+        @include themify {
+            background: $text-secondary-color;
+        }
     }
 
     .text_view_ghost & {
-        background: $text-ghost-color;
+
+        @include themify {
+            background: $text-ghost-color;
+        }
     }
 
     .text_view_link & {
-        background: $text-link-color;
+
+        @include themify {
+            background: $text-link-color;
+        }
     }
 
     .text_size_s & {

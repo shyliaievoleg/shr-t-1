@@ -44,20 +44,102 @@ $line-height-m: 25px;
 $line-height-xl: 34px;
 $line-height-xxl: 38px;
 
-// Theme colors
-$bg-default-color: $white;
-$bg-accent-color: $tangerine-yellow;
-$border-color: $black;
-$text-primary-color: $black;
-$text-secondary-color: $black-60;
-$text-ghost-color: $black-30;
-$text-link-color: $dodger-blue;
+$themes: (
+    default: (
+        'bg-default-color': $white,
+        'bg-accent-color': $tangerine-yellow,
+        'border-color': $black,
+        'text-primary-color': $black,
+        'text-secondary-color': $black-60,
+        'text-ghost-color': $black-30,
+        'text-link-color': $dodger-blue,
+    ),
+    inverse: (
+        'bg-default-color': $black,
+        'bg-accent-color': $white,
+        'border-color': $white,
+        'text-primary-color': $white,
+        'text-secondary-color': $white-60,
+        'text-ghost-color': $white-30,
+        'text-link-color': $dodger-blue,
+    ),
+    brand: (
+        'bg-default-color': $dodger-blue,
+        'bg-accent-color': $white,
+        'border-color': $white,
+        'text-primary-color': $white,
+        'text-secondary-color': $white-60,
+        'text-ghost-color': $white-30,
+        'text-link-color': $white,
+    ),
+    warning: (
+        'bg-default-color': $red-orange,
+        'bg-accent-color': $white,
+        'border-color': $red-orange,
+        'text-primary-color': $white,
+        'text-secondary-color': $white-60,
+        'text-ghost-color': $white-30,
+        'text-link-color': $dodger-blue,
+    ),
+);
+
+// Initialize variables
+$bg-default-color: null;
+$bg-accent-color: null;
+$border-color: null;
+$text-primary-color: null;
+$text-secondary-color: null;
+$text-ghost-color: null;
+$text-link-color: null;
+
+
+// TODO: Add ability to work with nested styles
+@mixin themify($themes: $themes) {
+
+    @each $theme, $colors in $themes {
+
+        &.theme_color_project-#{$theme},
+        .theme_color_project-#{$theme} & {
+
+            $bg-default-color: map-get($colors, 'bg-default-color') !global;
+            $bg-accent-color: map-get($colors, 'bg-accent-color') !global;
+            $border-color: map-get($colors, 'border-color') !global;
+            $text-primary-color: map-get($colors, 'text-primary-color') !global;
+            $text-secondary-color: map-get($colors, 'text-secondary-color') !global;
+            $text-ghost-color: map-get($colors, 'text-ghost-color') !global;
+            $text-link-color: map-get($colors, 'text-link-color') !global;
+
+            @content;
+
+            $bg-default-color: null !global;
+            $bg-accent-color: null !global;
+            $border-color: null !global;
+            $text-primary-color: null !global;
+            $text-secondary-color: null !global;
+            $text-ghost-color: null !global;
+            $text-link-color: null !global;
+        }
+    }
+}
+
+// Media query
+$screen-m: 1024px !default;
+
+@mixin screen-m {
+    @media only screen and (max-width : $screen-m) {
+        @content;
+    }
+}
 
 // Reset some styles
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
 }
 
 body,
@@ -83,56 +165,21 @@ dd {
     margin: 0;
     padding: 0;
 
-    * {
-        box-sizing: border-box;
+    @include themify {
+        background: $bg-default-color;
+        border-color: $border-color;
+        color: $text-primary-color;
     }
 
     &_size_default {
+
     }
 
     &_space_default {
+
     }
 
     &_gap_small {
-    }
 
-    &_color_project-default {
-        $bg-default-color: $white;
-        $bg-accent-color: $tangerine-yellow;
-        $border-color: $black;
-        $text-primary-color: $black;
-        $text-secondary-color: $black-60;
-        $text-ghost-color: $black-30;
-        $text-link-color: $dodger-blue;
-    }
-
-    &_color_project-brand {
-        $bg-default-color: $dodger-blue;
-        $bg-accent-color: $white;
-        $border-color: $white;
-        $text-primary-color: $white;
-        $text-secondary-color: $white-60;
-        $text-ghost-color: $white-30;
-        $text-link-color: $white;
-    }
-
-    &_color_project-inverse {
-        $bg-default-color: $black;
-        $bg-accent-color: $white;
-        $border-color: $white;
-        $text-primary-color: $white;
-        $text-secondary-color: $white-60;
-        $text-ghost-color: $white-30;
-        $text-link-color: $dodger-blue;
-    }
-
-    &_color_project-warning {
-        $bg-default-color: $red-orange;
-        $bg-accent-color: $white;
-        $border-color: $red-orange;
-        $text-primary-color: $white;
-        $text-secondary-color: $white-60;
-        $text-ghost-color: $white-30;
-        $text-link-color: $dodger-blue;
     }
 }

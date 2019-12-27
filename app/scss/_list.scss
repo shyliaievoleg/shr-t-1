@@ -4,11 +4,17 @@
     flex-flow: row wrap;
 
     &_border_all {
-        border: 3px solid $border-color;
+
+        @include themify {
+            border: 3px solid $border-color;
+        }
     }
 
     &_view_default {
-        background: $bg-default-color;
+
+        @include themify {
+            background: $bg-default-color;
+        }
     }
 }
 
@@ -18,7 +24,10 @@
     flex-flow: row wrap;
 
     &_border_bottom {
-        border-bottom: 3px solid $border-color;
+
+        @include themify {
+            border-bottom: 3px solid $border-color;
+        }
 
         &:last-child {
             border-bottom: none;
@@ -26,7 +35,10 @@
     }
 
     &_border_top {
-        border-top: 3px solid $border-color;
+
+        @include themify {
+            border-top: 3px solid $border-color;
+        }
     }
 
     &_distribute_between {

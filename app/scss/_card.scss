@@ -2,11 +2,17 @@
     width: 100%;
 
     &_border_all {
-        border: 3px solid $border-color;
+
+        @include themify {
+            border: 3px solid $border-color;
+        }
     }
 
     &_view_default {
-        background: $bg-default-color;
+
+        @include themify {
+            background: $bg-default-color;
+        }
     }
 }
 
