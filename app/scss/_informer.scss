@@ -1,4 +1,6 @@
 .informer {
+    display: flex;
+    flex-flow: column wrap;
 
     &_border_all {
         border: 3px solid $border-color;
@@ -37,6 +39,7 @@
 .informer__action {
     display: flex;
     flex-flow: row wrap;
+    margin-top: auto;
 
     &_distribute_default {
 

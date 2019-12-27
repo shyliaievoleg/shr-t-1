@@ -1,24 +1,27 @@
-'use strict'
+'use strict';
 
-document.body.addEventListener('click', function(e) {
+document.addEventListener("DOMContentLoaded", function() {
 
-    let accordion = e.target.closest('.e-accordion__short');
-    let onoffswitch = e.target.closest('.onoffswitch')
+    document.body.addEventListener('click', function(e) {
 
-    if (accordion) {
-        let elem = accordion.parentElement.querySelector('.e-accordion__more');
+        let accordion = e.target.closest('.e-accordion__short');
+        let onoffswitch = e.target.closest('.onoffswitch');
 
-        if (elem.style.display == 'flex') {
-            elem.style.display = 'none';
-        } else {
-            elem.style.display = 'flex';
+        if (accordion) {
+            let elem = accordion.parentElement.querySelector('.e-accordion__more');
+
+            if (elem.style.display == 'flex') {
+                elem.style.display = 'none';
+            } else {
+                elem.style.display = 'flex';
+            }
         }
-    }
 
-    if (onoffswitch) {
-        onoffswitch.classList.toggle('onoffswitch_checked');
+        if (onoffswitch) {
+            onoffswitch.classList.toggle('onoffswitch_checked');
 
-        // TODO: Switch theme
-    }
+            // TODO: Switch theme
+        }
 
+    });
 });

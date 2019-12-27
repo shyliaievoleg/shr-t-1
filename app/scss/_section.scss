@@ -1,6 +1,10 @@
 .section {
     display: flex;
 
+    &_indent-b_xxl {
+        margin-bottom: $space-xxl;
+    }
+
     &_indent-b_xxxxl {
         margin-bottom: $space-xxxxl;
     }

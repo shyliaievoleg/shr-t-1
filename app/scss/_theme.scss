@@ -53,6 +53,30 @@ $text-secondary-color: $black-60;
 $text-ghost-color: $black-30;
 $text-link-color: $dodger-blue;
 
+// Reset some styles
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
 .theme {
     font-size: $font-height-l;
     line-height: $line-height-l;
@@ -64,15 +88,12 @@ $text-link-color: $dodger-blue;
     }
 
     &_size_default {
-
     }
 
     &_space_default {
-
     }
 
     &_gap_small {
-
     }
 
     &_color_project-default {

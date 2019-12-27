@@ -1,0 +1,19 @@
+.event {
+    min-height: 400px;
+
+    &__preview {
+        display: flex;
+        justify-content: center;
+        margin-bottom: $space-xxl;
+    }
+
+    &__title {
+        margin-bottom: $space-s;
+    }
+
+    .avatar,
+    .brand-logo {
+        margin-left: $space-xs / 2;
+        margin-right: $space-xs / 2;
+    }
+}

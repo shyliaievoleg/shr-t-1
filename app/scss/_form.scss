@@ -15,12 +15,13 @@
     flex-flow: row wrap;
     width: 100%;
 
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
     &_border_bottom {
         border-bottom: 3px solid $border-color;
-
-        &:last-child {
-            border-bottom: none;
-        }
     }
 
     &_distribute_between {
