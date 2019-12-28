@@ -871,6 +871,8 @@ dd {
 .product {
   min-height: 300px;
   border-width: 3px; }
+  .product__title {
+    margin-bottom: 45px; }
   .product__image.theme_color_project-default,
   .theme_color_project-default .product__image {
     background: #fff; }

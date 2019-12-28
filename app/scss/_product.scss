@@ -2,6 +2,10 @@
     min-height: 300px;
     border-width: 3px;
 
+    &__title {
+        margin-bottom: $space-xxxl;;
+    }
+
     &__image {
 
         @include themify {
