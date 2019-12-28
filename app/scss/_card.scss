@@ -1,5 +1,7 @@
 .card {
     width: 100%;
+    display: flex;
+    flex-flow: column wrap;
 
     &_border_all {
 
@@ -51,6 +53,7 @@
 .card__footer {
     display: flex;
     flex-flow: row wrap;
+    margin-top: auto;
 
     &_distribute_between {
         justify-content: space-between;

@@ -116,14 +116,19 @@ dd {
   .grid_m-columns_12 .grid__fraction_m-col_3 {
     width: 25%; }
   .grid_m-columns_12 .grid__fraction_m-col_4 {
-    width: 33.33333%; }
+    width: 32.3333%; }
   .grid_m-columns_12 .grid__fraction_m-col_5 {
     width: 41.66667%; }
   .grid_m-columns_12 .grid__fraction_m-col_8 {
     width: 66.66667%; }
 
 .card {
-  width: 100%; }
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column wrap; }
   .card_border_all.theme_color_project-default,
   .theme_color_project-default .card_border_all {
     border: 3px solid #000; }
@@ -167,7 +172,8 @@ dd {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  margin-top: auto; }
   .card__footer_distribute_between {
     -webkit-box-pack: justify;
     justify-content: space-between; }
@@ -320,6 +326,8 @@ dd {
 .form__control {
   -webkit-box-flex: 0;
   flex: 0 0 65%; }
+  .form__control .button {
+    margin-left: auto; }
 
 .informer {
   display: -webkit-box;
@@ -702,7 +710,8 @@ dd {
   background: #fff; }
 
 .button {
-  width: 200px; }
+  width: 200px;
+  cursor: pointer; }
   .button.theme_color_project-default,
   .theme_color_project-default .button {
     background: #fc0; }
@@ -729,7 +738,8 @@ dd {
     width: 100%; }
 
 .input {
-  width: 100%; }
+  width: 100%;
+  cursor: text; }
   .input.theme_color_project-default,
   .theme_color_project-default .input {
     border: 3px solid #000; }
@@ -758,11 +768,9 @@ dd {
   background-repeat: no-repeat; }
   .theme_color_project-default > .image {
     background-image: url("image-placeholder-primary.svg");
-    border: 3px solid #000;
     background-color: #fff; }
   .theme_color_project-inverse > .image {
     background-image: url("image-placeholder-inverse.svg");
-    border: 3px solid #fff;
     background-color: #000; }
   .theme_color_project-brand .image {
     background-image: url("image-placeholder-inverse.svg"); }
@@ -777,7 +785,9 @@ dd {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center; }
   .header__logo {
     width: 179px;
     height: 34px; }
@@ -805,6 +815,8 @@ dd {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between; }
+    .footer__content .text {
+      width: auto; }
 
 .history__transaction {
   padding-top: 0; }
@@ -841,6 +853,8 @@ dd {
     margin-bottom: 36px; }
   .event__title {
     margin-bottom: 15px; }
+  .event__footer {
+    padding-top: 0; }
   .event .avatar,
   .event .brand-logo {
     margin-left: 4.5px;

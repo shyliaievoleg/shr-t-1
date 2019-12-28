@@ -11,6 +11,10 @@
         margin-bottom: $space-s;
     }
 
+    &__footer {
+        padding-top: 0;
+    }
+
     .avatar,
     .brand-logo {
         margin-left: $space-xs / 2;

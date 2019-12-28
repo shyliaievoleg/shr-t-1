@@ -8,5 +8,9 @@
         max-width: 1280px;
         display: flex;
         justify-content: space-between;
+
+        .text {
+            width: auto;
+        }
     }
 }

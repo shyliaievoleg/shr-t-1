@@ -4,13 +4,11 @@
 
     .theme_color_project-default > & {
         background-image: url('image-placeholder-primary.svg');
-        border: 3px solid $black;
         background-color: $white;
     }
 
     .theme_color_project-inverse > & {
         background-image: url('image-placeholder-inverse.svg');
-        border: 3px solid $white;
         background-color: $black;
     }
     .theme_color_project-brand & {

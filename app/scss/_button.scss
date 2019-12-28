@@ -1,5 +1,6 @@
 .button {
     width: 200px;
+    cursor: pointer;
 
     @include themify {
         background: $bg-accent-color;
